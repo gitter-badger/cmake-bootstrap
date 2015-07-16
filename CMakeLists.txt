@@ -11,11 +11,9 @@ include_directories(../../include ${Boost_INCLUDE_DIR})
 
 find_package(Threads REQUIRED)
 
-if(CMAKE_COMPILER_IS_GNUCXX)
+if("${CMAKE_CXX_COMPILER_ID}" STREQUAL "GNU" OR "${CMAKE_CXX_COMPILER_ID}" STREQUAL "Clang")
     add_definitions(-std=gnu++11 -Wall -Weffc++ -Wno-deprecated -pthread)
-endif()
-
-if(MSVC)
+elseif("${CMAKE_CXX_COMPILER_ID}" STREQUAL "MSVC")
     set(MSVC_COMPILER_DEFS "-D_CRT_SECURE_NO_DEPRECATE -D_SCL_SECURE_NO_WARNINGS -D_VARIADIC_MAX=10")
     add_definitions(${MSVC_COMPILER_DEFS})
     add_definitions(/MP)
