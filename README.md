@@ -1,5 +1,7 @@
 # CMake Bootstrap
 
+[![Join the chat at https://gitter.im/gumbit/cmake-bootstrap](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/gumbit/cmake-bootstrap?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 C/C++ project bootstrap using CMake.
 
 To build this project, run the following commands from the project's root directory:
