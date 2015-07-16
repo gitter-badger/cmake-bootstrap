@@ -1,0 +1,5 @@
+# JetBrains CLion directory
+/.idea
+
+# The default out-of-tree build directory
+/build
